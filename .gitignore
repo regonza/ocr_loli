@@ -1,1 +1,3 @@
 cz.toml
+.coverage
+venv/

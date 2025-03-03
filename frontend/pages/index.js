@@ -11,6 +11,10 @@ export default function Home() {
   };
 
   const handleUpload = async () => {
+    const API_URL = typeof window !== "undefined"
+  ? "http://localhost:8000/ocr/"  // Si está en el navegador, usa localhost
+  : "http://backend:8000/ocr/";  // Si está en un contenedor Docker, usa backend
+
     if (files.length === 0) {
       alert("Seleccioná al menos una imagen.");
       return;
@@ -24,11 +28,10 @@ export default function Home() {
       formData.append("file", file);
 
       try {
-        const response = await fetch("http://backend:8000/ocr/", {
+        const response = await fetch(API_URL, {
           method: "POST",
           body: formData,
         });
-
         const data = await response.json();
         newTexts[file.name] = data.text; // Guarda el texto extraído para cada imagen
       } catch (error) {

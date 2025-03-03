@@ -43,5 +43,11 @@ yarn-error.log*
 next-env.d.ts
 
 #python cache
-*__pycache__/
+__pycache__/
+backend/*__pycache__/
+frontend/*__pycache__/
 *.pyc
+backend/services/__pycache__/
+
+#dev elements
+backend/test_image.jpg

@@ -1,6 +1,4 @@
-cz.toml
-.coverage
-venv/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
@@ -42,12 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-#python cache
-__pycache__/
-backend/*__pycache__/
-frontend/*__pycache__/
-*.pyc
-backend/services/__pycache__/
 
 #dev elements
 backend/test_image.jpg

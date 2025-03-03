@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "tailwind": "tailwindcss -i ./styles/globals.css -o ./public/output.css --watch"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.3",

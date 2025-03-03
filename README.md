@@ -130,3 +130,33 @@ Este proyecto está bajo la licencia **MIT**. Usalo, modificalo y compartilo lib
 ---
 
 🚀 **Cota & NachoGPT** - Código, mate y pasión. 🇦🇷💻
+
+textter-project/
+│── backend/                   # 📡 Backend en FastAPI
+│   ├── services/              # 🔍 Lógica de OCR
+│   │   ├── ocr.py             # 📄 Módulo de OCR con pytesseract
+│   ├── tests/                 # 🧪 Tests unitarios
+│   │   ├── test_ocr.py        # ✅ Tests para el OCR
+│   ├── main.py                # 🚀 Punto de entrada del backend
+│   ├── requirements.txt       # 📦 Dependencias del backend
+│   ├── Dockerfile             # 🐳 Configuración de Docker
+│
+│── frontend/                  # 🎨 Frontend con Next.js
+│   ├── pages/                 # 📄 Páginas de Next.js
+│   │   ├── index.js           # 🏠 Página principal con subida de imágenes
+│   │   ├── _app.js            # ⚙️ Importa `globals.css` en toda la app
+│   ├── styles/                # 🎨 Estilos globales con TailwindCSS
+│   │   ├── globals.css        # 🌍 Estilos generales de TailwindCSS
+│   ├── public/                # 🖼 Archivos estáticos (salida de TailwindCSS)
+│   │   ├── output.css         # 🎨 Archivo de estilos generado por Tailwind
+│   ├── tailwind.config.js     # ⚙️ Configuración opcional de Tailwind
+│   ├── package.json           # 📦 Dependencias y scripts de Next.js
+│   ├── next.config.js         # ⚙️ Configuración de Next.js
+│
+│── .github/                    # 🔄 Automatización con GitHub Actions
+│   ├── workflows/
+│   │   ├── tests.yml          # ✅ CI para correr los tests automáticamente
+│
+│── docker-compose.yml          # 🐳 Orquestación de frontend y backend
+│── .gitignore                  # 🚫 Archivos ignorados por Git
+│── README.md                   # 📖 Documentación del proyecto

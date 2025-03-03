@@ -9,3 +9,6 @@ pytesseract==0.3.13
 pytest==8.3.5
 pytest-cov==6.0.0
 tomli==2.2.1
+fastapi
+uvicorn
+python-multipart

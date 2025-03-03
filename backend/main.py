@@ -1,5 +1,5 @@
 from fastapi import FastAPI, File, UploadFile
-from backend.services.ocr import OCRProcessor
+from services.ocr import OCRProcessor
 import shutil
 import os
 

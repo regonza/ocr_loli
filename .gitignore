@@ -51,3 +51,6 @@ backend/services/__pycache__/
 
 #dev elements
 backend/test_image.jpg
+package-lock.json
+.next/
+node_modules/

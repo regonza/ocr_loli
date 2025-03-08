@@ -1,6 +1,7 @@
 from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-from services.ocr import OCRProcessor
+from backend.services.ocr import OCRProcessor
+from backend.api import agents
 import shutil
 import os
 
@@ -16,6 +17,9 @@ app.add_middleware(
     allow_methods=["*"],  # Permitir todos los métodos (GET, POST, etc.)
     allow_headers=["*"],  # Permitir todos los headers
 )
+
+app.include_router(agents.router, prefix="/api", tags=["agents"])
+
 
 ocr_processor = OCRProcessor(lang="spa")
 
@@ -34,3 +38,7 @@ async def process_ocr(file: UploadFile = File(...)):
     os.remove(temp_path)  # Eliminar el archivo temporal
 
     return {"text": texto}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
